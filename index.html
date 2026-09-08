@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>GT7 Dashboard Custom Installer</title>
+  <script type="module" src="https://unpkg.com/esp-web-tools@10.1.1/dist/web/install-button.js?module"></script>
+  <style>
+    :root { color-scheme: dark; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; background:#0b0f14; color:#eef3f8; }
+    .wrap { width:min(920px, calc(100% - 32px)); margin:0 auto; padding:48px 0 64px; }
+    .hero { margin-bottom:28px; }
+    .badge { display:inline-flex; gap:8px; align-items:center; padding:7px 10px; border:1px solid #26303a; border-radius:999px; color:#9db0c2; font-size:13px; }
+    h1 { font-size:clamp(32px,6vw,58px); margin:16px 0 10px; line-height:1.05; letter-spacing:-.03em; }
+    .lead { margin:0; max-width:720px; color:#aebdca; font-size:17px; line-height:1.7; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:28px; }
+    .card { background:#111820; border:1px solid #25303a; border-radius:18px; padding:22px; box-shadow:0 18px 60px rgba(0,0,0,.22); }
+    .card h2 { margin:0 0 8px; font-size:22px; }
+    .meta { color:#8fa2b4; font-size:14px; margin-bottom:18px; }
+    .ok { color:#7ee787; }
+    .warn { margin-top:26px; padding:18px 20px; border-radius:14px; border:1px solid #4b3e1f; background:#1c170c; color:#d7c38c; line-height:1.65; }
+    .steps { margin-top:26px; border-top:1px solid #242d36; padding-top:24px; color:#b7c5d1; line-height:1.8; }
+    code { background:#18212b; padding:2px 6px; border-radius:6px; }
+    footer { margin-top:36px; color:#718292; font-size:13px; }
+    esp-web-install-button::part(button) { border:none; border-radius:12px; padding:13px 16px; font-weight:700; font-size:15px; background:#238636; color:white; cursor:pointer; }
+    @media (max-width:700px){ .grid{grid-template-columns:1fr;} .wrap{padding-top:30px;} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">GT7 Dashboard Custom <strong>v1.10.0</strong></div>
+      <h1>ESP32 Web Installer</h1>
+      <p class="lead">用 Chrome 直接透過 USB 安裝，不需要 Terminal。第一次從原版／舊分割表升級時，請勾選清除裝置資料，讓新的 A/B OTA 分割表完整寫入。</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>ILI9341</h2>
+        <div class="meta"><span class="ok">建議／你目前這台</span> · ESP32-2432S028</div>
+        <esp-web-install-button manifest="manifest-ili9341.json">
+          <button slot="activate">Connect & Install ILI9341</button>
+          <span slot="unsupported">請使用桌面版 Chrome / Edge</span>
+        </esp-web-install-button>
+      </article>
+
+      <article class="card">
+        <h2>ST7789</h2>
+        <div class="meta">替代顯示控制器版本</div>
+        <esp-web-install-button manifest="manifest-st7789.json">
+          <button slot="activate">Connect & Install ST7789</button>
+          <span slot="unsupported">請使用桌面版 Chrome / Edge</span>
+        </esp-web-install-button>
+      </article>
+    </section>
+
+    <div class="warn">
+      <strong>第一次安裝：</strong>請選擇「Erase device / 清除裝置」後再安裝。這個完整映像包含 bootloader、A/B OTA partition table、boot metadata 與 v1.10.0 firmware。清除後 Wi‑Fi 設定會消失，開機後需重新連線 <code>GT7-DASH-SETUP</code>。
+    </div>
+
+    <section class="steps">
+      <strong>安裝流程</strong><br>
+      1. ESP32 用 USB 接電腦。<br>
+      2. 使用 Chrome 或 Edge 開啟此頁。<br>
+      3. 你的裝置請選 ILI9341。<br>
+      4. 按 Connect & Install，選擇 USB Serial。<br>
+      5. 第一次安裝請清除裝置後寫入。<br>
+      6. 完成後重新設定 Wi‑Fi，再進 GT7 測試。
+    </section>
+
+    <footer>GT7 Dashboard Custom Installer · Compiled firmware only · Source project remains private.</footer>
+  </main>
+</body>
+</html>
