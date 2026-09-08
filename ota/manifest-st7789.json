@@ -1,7 +1,7 @@
 {
-  "version": "1.10.2",
+  "version": "1.10.3",
   "target": "st7789",
   "url": "https://shen7912-ctrl.github.io/gt7-dashboard-installer/firmware/firmware-st7789.bin",
-  "size": 1679616,
-  "sha256": "dd24b50c28fd1026e64fdfffec5f1a4ba44faf415a5caed311258a3485a4c27e"
+  "size": 1680848,
+  "sha256": "f0bd3bb2c0b5ff4760122676a1a9f8bdfa72309845cf2764a809f8af15bccd78"
 }
