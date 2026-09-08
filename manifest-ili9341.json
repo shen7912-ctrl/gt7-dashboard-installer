@@ -1,0 +1,16 @@
+{
+  "name": "GT7 Dashboard Custom ILI9341",
+  "version": "1.10.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "firmware/firmware-ili9341-full.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
