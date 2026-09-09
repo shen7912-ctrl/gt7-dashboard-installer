@@ -1,7 +1,7 @@
 {
-  "version": "1.10.6",
+  "version": "1.10.7",
   "target": "ili9341",
   "url": "https://shen7912-ctrl.github.io/gt7-dashboard-installer/firmware/firmware-ili9341.bin",
-  "size": 1685664,
-  "sha256": "67b09b38f3e5e5e52136b43a689d0e917afaaeca50e055c7fc5d3d55a3e77ba4"
+  "size": 1686992,
+  "sha256": "a943fb162356b3c7da7d081ee1f30233661db637a3808d5f4aebca87b1675fa0"
 }
