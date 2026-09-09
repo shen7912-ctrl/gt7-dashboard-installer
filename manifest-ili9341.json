@@ -1,6 +1,6 @@
 {
   "name": "GT7 Dashboard Custom ILI9341",
-  "version": "1.10.10",
+  "version": "1.10.11",
   "new_install_prompt_erase": true,
   "builds": [
     {
