@@ -1,6 +1,6 @@
 {
   "name": "GT7 Dashboard Custom ST7789",
-  "version": "1.10.20",
+  "version": "1.10.21",
   "new_install_prompt_erase": true,
   "builds": [
     {
