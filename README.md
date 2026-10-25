@@ -2,7 +2,13 @@
 
 Public Web Serial installer for the private **GT7 Dashboard Custom** firmware project.
 
-Current test release: **v1.10.0**
+**THIS IS THE PUBLIC RELEASE REPOSITORY, NOT FIRMWARE SOURCE.** The editable firmware code, PlatformIO builds, tests and official release workflow live in [`shen7912-ctrl/esp32-gt7-dashboard-custom`](https://github.com/shen7912-ctrl/esp32-gt7-dashboard-custom), **`develop` branch**. Its `main` branch is legacy v1.8.0. Do not manually publish binaries from that branch.
+
+**Install / 安裝網站:** https://shen7912-ctrl.github.io/gt7-dashboard-installer/
+
+Firmware pushes to `develop` run the private repository's publish workflow, which updates the firmware images and OTA manifests here. The firmware version on the website is determined by the published manifests, not this README.
+
+Current release: **v1.10.29** (the definitive live version is in `manifest-ili9341.json` and `manifest-st7789.json`).
 
 Supported display targets:
 
